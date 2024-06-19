@@ -1,0 +1,151 @@
+:root {
+  --purple: #824DFD;
+  --red: rgb(224 67 67);
+  --grey: rgb(95, 95, 95);
+  --light-grey: #F0F0F0;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--light-grey);
+  margin: auto;
+}
+.card {
+  background-color: white;
+  border-radius: 20px;
+  border-bottom-right-radius: 150px;
+  max-width: 650px;
+  padding: 3em;
+  margin: 3em auto;
+}
+.flex {
+  display: flex;
+}
+.flex.c {
+  flex-direction: column;
+}
+.divCtr {
+  border-top: 2px solid var(--light-grey);
+  margin: 3em 0 2em;
+  position: relative;
+}
+.divider {
+  background-color: var(--purple);
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: -2.5em;
+  right: 0;
+}
+.divider::after {
+  content: '';
+  background-image: url(../assets/images/icon-arrow.svg);
+  width: 50px;
+  height: 50px;
+  position: relative;
+  display: block;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%);
+}
+/* input */
+.Input {
+  text-align: left;
+}
+.Input form {
+  gap: 1em;
+  width: fit-content;
+}
+.Input form > div {
+  flex: 1;
+  max-width: 7em;
+}
+.Input input {
+  padding: .5em 1em;
+  border: 1px solid var(--grey);
+  border-radius: 5px;
+  font-size: 1.2em;
+  font-weight: 900;
+}
+.Input input:focus {
+  outline-color: var(--purple);
+}
+.Input label {
+  text-transform: uppercase;
+  color: var(--grey);
+  font-weight: 700;
+}
+.warn {
+  display: none;
+  color: var(--red);
+  font-size: .8em;
+  font-style: italic;
+}
+/* output */
+.Output {
+  font-size: 4.5em;
+  font-weight: 800;
+  font-style: italic; 
+}
+.oR {
+  color: var(--purple);
+}
+/* mobile */
+@media only screen and (max-width: 680px) {
+  .card {
+    max-width: 90%;
+    margin: 3em 5%;
+  }
+  .divCtr {
+    margin: 5em 0 4em;
+  }
+  .divider {
+    right: unset;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .Input form {
+    margin: auto;
+  }
+}
+@media only screen and (max-width: 520px) {
+    .card {
+      padding: 3em 2em;
+    }
+  .Input input {
+    font-size: 1em;
+  }
+  .Input form > div {
+      max-width: 6em;
+  }
+  .Output {
+    font-size: 4em;
+  }
+}
+@media only screen and (max-width: 420px) {
+    .card {
+      border-bottom-right-radius: 100px;
+    }
+    .Input form > div {
+      max-width: 5em;
+    }
+    .Input input {
+      padding: .5em;
+    }
+    .Output {
+      font-size: 3em;
+    }
+}
+@media only screen and (max-width: 370px) {
+    .card {
+      padding: 2em 1em;
+    }
+    .Input form {
+      gap: .5em;
+    }
+    .Input form>div {
+      max-width: 4.5em;
+    }
+}
