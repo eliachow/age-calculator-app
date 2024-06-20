@@ -1,13 +1,66 @@
 :root {
-  --purple: #824DFD;
-  --red: rgb(224 67 67);
-  --grey: rgb(95, 95, 95);
-  --light-grey: #F0F0F0;
+  --purple: hsl(259, 100%, 65%);
+  --red: hsl(0, 100%, 67%);
+  --white: hsl(0, 0%, 100%);
+  --off-white: hsl(0, 0%, 94%);
+  --light-grey: hsl(0, 0%, 86%);
+  --smokey-grey: hsl(0, 1%, 44%);
+  --off-black: hsl(0, 0%, 8%);
 }
 * {
   box-sizing: border-box;
 }
+@font-face {
+  
+  font-family: 'Poppins';
+  src: url('../assets/fonts/Poppins-Regular.woff2') format('woff2'),
+  url('../assets/fonts/Poppins-Regular.woff') format('woff'),
+  url('../assets/fonts/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../assets/fonts/Poppins-Italic.woff2') format('woff2'),
+  url('../assets/fonts/Poppins-Italic.woff') format('woff'),
+  url('../assets/fonts/Poppins-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../assets/fonts/Poppins-Bold.woff2') format('woff2'),
+  url('../assets/fonts/Poppins-Bold.woff') format('woff'),
+  url('../assets/fonts/Poppins-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../assets/fonts/Poppins-BoldItalic.woff2') format('woff2'),
+  url('../assets/fonts/Poppins-BoldItalic.woff') format('woff'),
+  url('../assets/fonts/Poppins-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../assets/fonts/Poppins-ExtraBold.woff2') format('woff2'),
+  url('../assets/fonts/Poppins-ExtraBold.woff') format('woff'),
+  url('../assets/fonts/Poppins-ExtraBold.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../assets/fonts/Poppins-ExtraBoldItalic.woff2') format('woff2'),
+  url('../assets/fonts/Poppins-ExtraBoldItalic.woff') format('woff'),
+  url('../assets/fonts/Poppins-ExtraBoldItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+}
 body {
+  font-family: 'Poppins', sans-serif;
   background-color: var(--light-grey);
   margin: auto;
 }
@@ -64,7 +117,7 @@ body {
 }
 .Input input {
   padding: .5em 1em;
-  border: 1px solid var(--grey);
+  border: 1px solid var(--smokey-grey);
   border-radius: 5px;
   font-size: 1.2em;
   font-weight: 900;
@@ -74,7 +127,7 @@ body {
 }
 .Input label {
   text-transform: uppercase;
-  color: var(--grey);
+  color: var(--smokey-grey);
   font-weight: 700;
 }
 .warn {

@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://cloudconvert.com/
+HostUrl=https://eu-central.storage.cloudconvert.com/tasks/0e3b60cf-2c57-4ec1-9b9a-6d7214793334/Poppins-ExtraBold.woff2?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20240620%2Ffra%2Fs3%2Faws4_request&X-Amz-Date=20240620T075113Z&X-Amz-Expires=86400&X-Amz-Signature=d06d5002fda334a080d6cba9e1cdd90f3ac52af0015d21bc92c9d07c0a95b4d3&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3D%22Poppins-ExtraBold.woff2%22&response-content-type=font%2Fwoff2&x-id=GetObject

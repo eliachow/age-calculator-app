@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://cloudconvert.com/
+HostUrl=https://eu-central.storage.cloudconvert.com/tasks/320384d5-e844-426a-a311-7311e48da987/Poppins-BoldItalic.woff?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20240620%2Ffra%2Fs3%2Faws4_request&X-Amz-Date=20240620T074501Z&X-Amz-Expires=86400&X-Amz-Signature=c95b0f6e81dabf8c00618db3eef84abf013842d016c7b19bd6d1e70d4f8770cf&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3D%22Poppins-BoldItalic.woff%22&response-content-type=font%2Fwoff&x-id=GetObject
