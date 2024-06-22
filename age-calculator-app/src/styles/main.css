@@ -115,6 +115,7 @@ body {
 .Input form {
   gap: 1em;
   width: fit-content;
+  flex-wrap: wrap;
 }
 .Input form > div {
   flex: 1;
@@ -143,6 +144,11 @@ body {
 }
 .warn.on {
   display: block;
+}
+#exceed.on {
+  display: flex;
+  flex: 1 0 100%;
+  max-width: unset;
 }
 /* output */
 .Output {
