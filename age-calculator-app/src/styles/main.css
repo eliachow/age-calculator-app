@@ -78,28 +78,33 @@ body {
 .flex.c {
   flex-direction: column;
 }
-.divCtr {
-  border-top: 2px solid var(--light-grey);
-  margin: 3em 0 2em;
+.Input {
+  border-bottom: 2px solid var(--light-grey);
+  margin-bottom: 2em;
+  padding-bottom: 3em;
   position: relative;
-}
-.divider {
+} 
+.btn-submit {
   background-color: var(--purple);
   border-radius: 50%;
   width: 70px;
   height: 70px;
   position: absolute;
-  top: -2.5em;
+  bottom: -2.5em;
   right: 0;
+  border: none;
 }
-.divider::after {
+.btn-submit:hover{
+  background-color: var(--off-black);
+  cursor: pointer;
+}
+.btn-submit::after {
   content: '';
   background-image: url(../assets/images/icon-arrow.svg);
   width: 50px;
   height: 50px;
   position: relative;
   display: block;
-  top: 10%;
   left: 50%;
   transform: translate(-50%);
 }
@@ -136,6 +141,9 @@ body {
   font-size: .8em;
   font-style: italic;
 }
+.warn.on {
+  display: block;
+}
 /* output */
 .Output {
   font-size: 4.5em;
@@ -154,7 +162,7 @@ body {
   .divCtr {
     margin: 5em 0 4em;
   }
-  .divider {
+  .btn-submit {
     right: unset;
     left: 50%;
     transform: translate(-50%);
