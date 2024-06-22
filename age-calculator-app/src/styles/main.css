@@ -1,13 +1,66 @@
 :root {
-  --purple: #824DFD;
-  --red: rgb(224 67 67);
-  --grey: rgb(95, 95, 95);
-  --light-grey: #F0F0F0;
+  --purple: hsl(259, 100%, 65%);
+  --red: hsl(0, 100%, 67%);
+  --white: hsl(0, 0%, 100%);
+  --off-white: hsl(0, 0%, 94%);
+  --light-grey: hsl(0, 0%, 86%);
+  --smokey-grey: hsl(0, 1%, 44%);
+  --off-black: hsl(0, 0%, 8%);
 }
 * {
   box-sizing: border-box;
 }
+@font-face {
+  
+  font-family: 'Poppins';
+  src: url('../assets/fonts/Poppins-Regular.woff2') format('woff2'),
+  url('../assets/fonts/Poppins-Regular.woff') format('woff'),
+  url('../assets/fonts/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../assets/fonts/Poppins-Italic.woff2') format('woff2'),
+  url('../assets/fonts/Poppins-Italic.woff') format('woff'),
+  url('../assets/fonts/Poppins-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../assets/fonts/Poppins-Bold.woff2') format('woff2'),
+  url('../assets/fonts/Poppins-Bold.woff') format('woff'),
+  url('../assets/fonts/Poppins-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../assets/fonts/Poppins-BoldItalic.woff2') format('woff2'),
+  url('../assets/fonts/Poppins-BoldItalic.woff') format('woff'),
+  url('../assets/fonts/Poppins-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../assets/fonts/Poppins-ExtraBold.woff2') format('woff2'),
+  url('../assets/fonts/Poppins-ExtraBold.woff') format('woff'),
+  url('../assets/fonts/Poppins-ExtraBold.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../assets/fonts/Poppins-ExtraBoldItalic.woff2') format('woff2'),
+  url('../assets/fonts/Poppins-ExtraBoldItalic.woff') format('woff'),
+  url('../assets/fonts/Poppins-ExtraBoldItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+}
 body {
+  font-family: 'Poppins', sans-serif;
   background-color: var(--light-grey);
   margin: auto;
 }
@@ -25,28 +78,33 @@ body {
 .flex.c {
   flex-direction: column;
 }
-.divCtr {
-  border-top: 2px solid var(--light-grey);
-  margin: 3em 0 2em;
+.Input {
+  border-bottom: 2px solid var(--light-grey);
+  margin-bottom: 2em;
+  padding-bottom: 3em;
   position: relative;
-}
-.divider {
+} 
+.btn-submit {
   background-color: var(--purple);
   border-radius: 50%;
   width: 70px;
   height: 70px;
   position: absolute;
-  top: -2.5em;
+  bottom: -2.5em;
   right: 0;
+  border: none;
 }
-.divider::after {
+.btn-submit:hover{
+  background-color: var(--off-black);
+  cursor: pointer;
+}
+.btn-submit::after {
   content: '';
   background-image: url(../assets/images/icon-arrow.svg);
   width: 50px;
   height: 50px;
   position: relative;
   display: block;
-  top: 10%;
   left: 50%;
   transform: translate(-50%);
 }
@@ -57,6 +115,7 @@ body {
 .Input form {
   gap: 1em;
   width: fit-content;
+  flex-wrap: wrap;
 }
 .Input form > div {
   flex: 1;
@@ -64,7 +123,7 @@ body {
 }
 .Input input {
   padding: .5em 1em;
-  border: 1px solid var(--grey);
+  border: 1px solid var(--smokey-grey);
   border-radius: 5px;
   font-size: 1.2em;
   font-weight: 900;
@@ -74,7 +133,7 @@ body {
 }
 .Input label {
   text-transform: uppercase;
-  color: var(--grey);
+  color: var(--smokey-grey);
   font-weight: 700;
 }
 .warn {
@@ -82,6 +141,14 @@ body {
   color: var(--red);
   font-size: .8em;
   font-style: italic;
+}
+.warn.on {
+  display: block;
+}
+#exceed.on {
+  display: flex;
+  flex: 1 0 100%;
+  max-width: unset;
 }
 /* output */
 .Output {
@@ -101,7 +168,7 @@ body {
   .divCtr {
     margin: 5em 0 4em;
   }
-  .divider {
+  .btn-submit {
     right: unset;
     left: 50%;
     transform: translate(-50%);
