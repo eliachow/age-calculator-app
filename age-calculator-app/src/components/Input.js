@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 
-export default function Input() {
+export default function Input(props) {
+  const { setBirthDate } = props;
   const [day, setDay] = useState('');
   const [month, setMonth] = useState('');
   const [year, setYear] = useState('');
@@ -9,7 +10,10 @@ export default function Input() {
   const [yWarn, setYWarn] = useState('');
   const [exMo, setExMo] = useState('');
 
-  function handleDayChange(e) { setDay(e.target.value) }
+  function handleDayChange(e) { 
+    setDay(e.target.value)
+    document.getElementById('exceed').classList.remove('on');
+   }
   function handleMonthChange(e) { setMonth(e.target.value) }
   function handleYearChange(e) { setYear(e.target.value) }
 
@@ -67,11 +71,11 @@ export default function Input() {
       document.getElementById('yr').classList.add('on');
       isValid = false;
     } else if (year.length !== 4) {
-      setYWarn('Must be 4 characters');
+      setYWarn('Must be 4 numbers');
       document.getElementById('yr').classList.add('on');
       isValid = false;
     }
-    // validate date
+    // validate days in the month
     let y = parseInt(year);
     let m = parseInt(month) - 1;
     let d = parseInt(day);
@@ -90,9 +94,10 @@ export default function Input() {
       document.getElementById('exceed').classList.add('on');
       isValid = false;
     }
+ 
 
     if(isValid) {
-      console.log('valid');
+      setBirthDate({ year, month, day });
     }
   }
 
